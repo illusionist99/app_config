@@ -4,7 +4,7 @@ metadata:
   name: app
 spec:
   replicas: 1
-  revisionHistoryLimit: 3
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: app
@@ -18,8 +18,3 @@ spec:
         name: app
         ports:
         - containerPort: 80
-strategy:
-  type: RollingUpdate
-  rollingUpdate:
-    maxSurge: 1
-    maxUnavailable: 1
