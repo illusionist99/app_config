@@ -3,8 +3,11 @@ kind: Service
 metadata:
   name: wil-playground
 spec:
+  type: NodePort
   ports:
-  - port: 8888
+  - name: http
+    port: 8888
+    protocol: TCP
     targetPort: 8888
   selector:
     app: app

@@ -18,5 +18,3 @@ spec:
         name: app
         ports:
         - containerPort: 8888
-        - port: 8888
-
