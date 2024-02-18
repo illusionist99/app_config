@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v2
 kind: Deployment
 metadata:
   name: app
@@ -14,7 +14,7 @@ spec:
         app: app
     spec:
       containers:
-      - image: wil42/playground:v1
+      - image: wil42/playground:v2
         name: app
         ports:
         - containerPort: 8888
