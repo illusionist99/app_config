@@ -9,8 +9,7 @@ spec:
   ports:
   - port: 8888
     targetPort: 8888
-    protocole: TCP
+    protocol: TCP
     name: app
-  
   selector:
     app: app
