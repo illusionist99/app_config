@@ -1,7 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app
+  name: app-deploy
+  namespace: dev
+  labels:
+    app: app
 spec:
   replicas: 1
   selector:
@@ -13,7 +16,7 @@ spec:
         app: app
     spec:
       containers:
-      - image: wil42/playground:v2
-        name: app
+      - image: wil42/playground:v1
+        name: app-container
         ports:
         - containerPort: 8888
